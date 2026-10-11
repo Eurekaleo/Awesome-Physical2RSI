@@ -47,7 +47,7 @@ body { width: ${width}px; height: ${height}px; overflow: hidden; font-family: Ma
 .copy { position: absolute; left: ${Math.round(width * 0.045)}px; top: 50%; transform: translateY(-50%); width: ${Math.round(width - teaserWidth - width * 0.06)}px; }
 .brand { display: flex; align-items: center; gap: 14px; font-size: ${Math.round(titleSize * 0.42)}px; font-weight: 800; color: #125b50; margin-bottom: ${Math.round(titleSize * 0.75)}px; }
 .brand img { width: ${Math.round(titleSize * 0.72)}px; height: ${Math.round(titleSize * 0.72)}px; border-radius: 7px; }
-.brand span { font-weight: 500; }
+.brand span { color: #914252; }
 h1 { margin: 0; font-size: ${titleSize}px; line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; }
 h1 em { font-style: normal; color: #125b50; }
 .subtitle { margin: ${Math.round(titleSize * 0.42)}px 0 ${Math.round(titleSize * 0.5)}px; font-size: ${Math.round(titleSize * 0.4)}px; line-height: 1.45; color: #566760; }
@@ -58,7 +58,7 @@ h1 em { font-style: normal; color: #125b50; }
 .teaser { border-radius: 14px; box-shadow: 0 16px 38px rgba(23, 43, 40, 0.22), 0 0 0 2px rgba(255, 255, 255, 0.6); position: absolute; right: ${Math.round(width * 0.025)}px; top: 50%; transform: translateY(-50%); width: ${teaserWidth}px; }
 </style></head><body>
 <div class="copy">
-  <div class="brand"><img src="${asset("assets/mark.png")}" alt=""><div>Physical AI <span>+ RSI</span></div></div>
+  <div class="brand"><img src="${asset("assets/mark.png")}" alt=""><div>Physical<span>2</span>RSI</div></div>
   <h1>${lead}<br>to <em>${rest.replace(" Self-", "<br>Self&#8209;")}</em></h1>
   <p class="subtitle">${SURVEY.subtitle}</p>
   <div class="rule"></div>

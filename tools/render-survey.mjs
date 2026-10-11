@@ -86,7 +86,7 @@ export function renderHero() {
     '  <canvas class="hero-sky" aria-hidden="true"></canvas>',
     '  <div class="hero-inner">',
     '    <div class="hero-copy">',
-    '      <p class="hero-eyebrow"><span class="status-dot"></span>Physical AI + RSI · A survey &amp; reference library</p>',
+    '      <p class="hero-eyebrow"><span class="status-dot"></span>Physical2RSI · A survey &amp; reference library</p>',
     `      <h1 id="project-title">From Physical Experience to <span>Recursive Self&#8209;Improvement</span></h1>`,
     `      <p class="hero-subtitle">${html(SURVEY.subtitle)}</p>`,
     `      <p class="hero-authors">${authors}</p>`,

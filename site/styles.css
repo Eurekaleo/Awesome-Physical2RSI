@@ -144,6 +144,9 @@ button {
   font-weight: 800;
   white-space: nowrap;
 }
+.brand-accent {
+  color: var(--rose);
+}
 .brand-secondary {
   font-weight: 500;
 }

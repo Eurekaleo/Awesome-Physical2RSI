@@ -47,7 +47,7 @@ The server binds to `127.0.0.1` and serves `/awesome-physical-ai-rsi/`. If the r
 
 ## Project identity
 
-Use **Physical AI & Recursive Self-Improvement** for the complete public project name, **Physical AI + RSI** for compact labels, and **A Survey and Reference Library** for the subtitle. The project name describes the research direction. It is not a declaration of the manuscript's final title or a claim that every collected work demonstrates RSI.
+Use **From Physical Experience to Recursive Self-Improvement** (the survey's title) for the complete public project name, **Physical2RSI** for compact labels, and **A Survey and Reference Library** for the subtitle. The project name describes the research direction. It is not a declaration of the manuscript's final title or a claim that every collected work demonstrates RSI.
 
 `tools/public-files.mjs` holds the canonical project and repository URLs used by the README, checks, and local preview. When changing them, update `index.html`, `404.html`, `site.webmanifest`, `robots.txt`, `sitemap.xml`, `package.json`, issue links, artwork, and deployment documentation together.
 

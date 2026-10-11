@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions to **Physical AI & Recursive Self-Improvement** currently cover public reference metadata, accessibility, and the project website. Please use an issue to report a citation correction or website problem, or submit a focused pull request.
+Contributions to **Physical2RSI** (*From Physical Experience to Recursive Self-Improvement*) currently cover public reference metadata, accessibility, and the project website. Please use an issue to report a citation correction or website problem, or submit a focused pull request.
 
 ## Public scope
 
