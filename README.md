@@ -37,8 +37,8 @@ To see what present systems establish, the survey follows acquired changes (poli
 >
 > This view explains why successful data collection may yield poor teaching data, and why more accurate prediction may fail to improve control.
 
-<p align="center"><img src="assets/readme/figures/figure-1.png" width="900" alt="Figure 1. Learning behavior and learning how to improve it. The upper loop applies a fixed recipe; the lower route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."></p>
-<p align="center"><sub><b>Figure 1. Learning behavior and learning how to improve it.</b> The upper loop applies a fixed recipe; the lower route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-1.png" width="900" alt="Figure 1. Learning behavior and learning how to improve it. The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."></p>
+<p align="center"><sub><b>Figure 1. Learning behavior and learning how to improve it.</b> The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made.</sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/icons/questions-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/icons/questions-light.svg"><img src="assets/readme/icons/questions-light.svg" alt="" width="36" align="left"></picture>
 

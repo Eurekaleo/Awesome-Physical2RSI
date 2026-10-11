@@ -1115,9 +1115,11 @@ h2 {
   margin-bottom: 0;
 }
 .block-art {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
   width: auto;
-  height: 104px;
+  height: auto;
+  max-height: 104px;
   margin-bottom: -6px;
   filter: drop-shadow(0 8px 10px rgba(23, 43, 40, 0.12));
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -1143,8 +1145,9 @@ h2 {
 }
 .use-art {
   display: block;
-  height: 86px;
   width: auto;
+  height: auto;
+  max-height: 86px;
   margin: 0 0 12px;
   transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
@@ -1937,7 +1940,7 @@ h2 {
     font-size: 21px;
   }
   .block-art {
-    height: 74px;
+    max-height: 74px;
   }
   .block-head {
     gap: 12px;
