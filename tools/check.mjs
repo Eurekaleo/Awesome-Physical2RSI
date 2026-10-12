@@ -254,7 +254,7 @@ for (const [file, html] of htmlByFile) {
     `Outdated project name in ${file}`,
   );
   assert(
-    !/awesome-physical-ai(?=[/"'#?]|\.git\b)/.test(html),
+    !/awesome-physical-ai(?:-rsi)?(?=[/"'#?]|\.git\b)/i.test(html),
     `Outdated project URL in ${file}`,
   );
 }

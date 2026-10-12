@@ -1,5 +1,5 @@
 {
-  "name": "awesome-physical-ai-rsi",
+  "name": "awesome-physical2rsi",
   "version": "0.1.0",
   "private": true,
   "description": "Physical2RSI — From Physical Experience to Recursive Self-Improvement: a survey and public reference library.",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eurekaleo/awesome-physical-ai-rsi.git"
+    "url": "git+https://github.com/Eurekaleo/Awesome-Physical2RSI.git"
   },
-  "homepage": "https://eurekaleo.github.io/awesome-physical-ai-rsi/"
+  "homepage": "https://eurekaleo.github.io/Awesome-Physical2RSI/"
 }

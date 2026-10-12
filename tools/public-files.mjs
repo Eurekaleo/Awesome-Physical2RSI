@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 export const ROOT = fileURLToPath(new URL("../", import.meta.url));
 export const PROJECT_NAME = "From Physical Experience to Recursive Self-Improvement";
 export const SHORT_NAME = "Physical2RSI";
-export const SITE_URL = "https://eurekaleo.github.io/awesome-physical-ai-rsi/";
-export const REPO_URL = "https://github.com/Eurekaleo/awesome-physical-ai-rsi";
+export const SITE_URL = "https://eurekaleo.github.io/Awesome-Physical2RSI/";
+export const REPO_URL = "https://github.com/Eurekaleo/Awesome-Physical2RSI";
 export const DATA_FILE = "data/references.json";
 export const BASE_FILES = [
   "index.html",
