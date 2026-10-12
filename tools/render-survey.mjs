@@ -22,6 +22,7 @@ import {
   QUESTIONS,
   RECURSION,
   SURVEY,
+  SYSTEMS,
   TEASER_ALT,
   USES,
   surveyBibtex,
@@ -110,6 +111,7 @@ export function renderHero() {
 // The survey's own robot illustrations (assets/art, from the manuscript's figures), keyed by their figure role.
 const CONDITION_ART = ["signal", "recipient", "shift", "continuation"];
 const USE_ART = ["act", "practice", "reuse", "procedure"];
+const RECURSION_ART = [null, "reviser", "selfrevise", null];
 
 function art(name, className) {
   const [width, height] = imageSize(`assets/art/${name}.webp`);
@@ -156,6 +158,7 @@ export function renderSurveySection() {
   const framework = [
     ...figure(2),
     `<p class="evidence-note"><strong>What current evidence shows.</strong> ${html(EVIDENCE)}</p>`,
+    ...figure(5),
   ];
   const uses = ['<div class="use-grid">'];
   for (const [i, [use, change, next, claim, chapter]] of USES.entries())
@@ -167,11 +170,14 @@ export function renderSurveySection() {
       `    <dl><div><dt>Retained change</dt><dd>${html(change)}</dd></div><div><dt>Immediate use</dt><dd>${html(next)}</dd></div><div><dt>Principal claim</dt><dd>${html(claim)}</dd></div></dl>`,
       "  </article>",
     );
-  uses.push("</div>", ...figure(3));
+  uses.push("</div>", ...figure(3), '<h4 class="systems-title">Four systems where models, policies, and physical data change</h4>', '<div class="system-grid">');
+  for (const [key, name, summary] of SYSTEMS)
+    uses.push(`  <article class="system-card">${art(key, "system-art")}<div><h5>${html(name)}</h5><p>${html(summary)}</p></div></article>`);
+  uses.push("</div>", ...figure(4));
   const recursion = [
     ...figure(6),
     '<ul class="recursion-list">',
-    ...RECURSION.map(([lead, text]) => `  <li><strong>${html(lead)}</strong> ${html(text)}</li>`),
+    ...RECURSION.map(([lead, text], i) => `  <li>${RECURSION_ART[i] ? art(RECURSION_ART[i], "recursion-art") : '<span class="recursion-dot" aria-hidden="true"></span>'}<div><strong>${html(lead)}</strong> ${html(text)}</div></li>`),
     "</ul>",
   ];
   const problems = ['<div class="problem-grid">'];
@@ -206,7 +212,7 @@ export function renderSurveySection() {
     ...[
       block(1, "survey-overview", "Overview", "From better behavior to better learning", "knowledge", intro),
       block(2, "survey-questions", "Research questions", "What the survey asks", "shift", questions),
-      block(3, "survey-framework", "The review at a glance", "Four uses, four conditions, four claims", "outcome", framework),
+      block(3, "survey-framework", "The review at a glance", "Four uses, four conditions, four claims", "compare", framework),
       block(4, "survey-uses", "Four uses of acquired change", "Where an acquired change goes next", "retain", uses),
       block(5, "survey-recursion", "Toward recursive self-improvement", "Testing the two links of recursion", "revise", recursion),
       block(6, "survey-problems", "Open problems", "Six directions to start from", "repair", problems),

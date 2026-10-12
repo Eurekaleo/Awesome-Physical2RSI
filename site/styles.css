@@ -1154,6 +1154,76 @@ h2 {
 .use-card:hover .use-art {
   transform: scale(1.06) rotate(-2deg);
 }
+.systems-title {
+  margin: 30px 0 14px;
+  font-size: 16px;
+}
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.system-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.system-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -16px rgba(23, 43, 40, 0.4);
+}
+.system-art {
+  flex: 0 0 auto;
+  width: 76px;
+  height: 64px;
+  object-fit: contain;
+}
+.system-card h5 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+.system-card p {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.recursion-list {
+  padding-left: 0 !important;
+  list-style: none;
+}
+.recursion-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+}
+.recursion-dot {
+  flex: 0 0 64px;
+  display: grid;
+  place-items: center;
+}
+.recursion-dot::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f6d77a, #e8a93a);
+}
+.recursion-art {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
 .question-grid,
 .use-grid,
 .problem-grid {
@@ -1916,6 +1986,9 @@ h2 {
   }
 }
 @media (max-width: 999px) {
+  .system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .survey-intro {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1951,6 +2024,9 @@ h2 {
   .question-grid,
   .use-grid,
   .problem-grid {
+    grid-template-columns: 1fr;
+  }
+  .system-grid {
     grid-template-columns: 1fr;
   }
   .survey-figure {

@@ -8,10 +8,11 @@ export const SURVEY = {
   // [name, affiliation numbers]
   authors: [
     ["Meng Luo", [1]],
-    ["Jiajia Song", [1]],
+    ["Zechen Bai", [1]],
     ["Shanqing Xu", [2]],
     ["Yanlin Li", [1]],
     ["Kaixin Li", [1]],
+    ["Mengchen Qian", [2]],
     ["Ziyang Luo", [3]],
     ["Wei Chen", [2]],
     ["Hongzhan Lin", [1]],
@@ -42,6 +43,8 @@ export const FIGURES = {
   1: ["Learning behavior and learning how to improve it.", "The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."],
   2: ["The review at a glance.", "The rows give the four uses of an acquired change (Sections 3–6), the four conditions for carrying it into the next round, and the four claims a comparison can establish. Illustrations show the grasping robot’s four breakdowns from Section 1."],
   3: ["Four later uses of acquired change.", "Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater."],
+  4: ["Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.", "SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data."],
+  5: ["Does a revised component help the next learner?", "Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately."],
   6: ["Testing the two links of recursive self-improvement.", "Top: does acquired repair knowledge make the reviser produce a better learning procedure on common new failures? Bottom: does a self-revision proposed with that knowledge beat one proposed with it frozen? The diagram specifies proposed comparisons, not reported results."],
 };
 
@@ -127,3 +130,11 @@ export function surveyBibtex(url) {
 
 export const TEASER_ALT =
   "A painting in the style of Van Gogh: under a swirling starry sky, a small robot practises grasping a mug, files the change it kept, rewrites its own learning recipe, and climbs a step holding the improved recipe, while a golden trail loops back to the start.";
+
+// Figure 4's four systems (panel titles), with the robot that illustrates each panel
+export const SYSTEMS = [
+  ["silvr", "SILVR", "Real-robot collection and planner revision"],
+  ["rise", "RISE", "Improve a policy inside fixed learned models"],
+  ["playworld", "PlayWorld", "Acquire play data, fit a model, then optimize a noise policy"],
+  ["vlaw", "VLAW", "Update the world model, then the policy; repeat with new physical data"],
+];

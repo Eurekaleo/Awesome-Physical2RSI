@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
 
-  <p>Meng Luo<sup>1</sup> · Jiajia Song<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Ziyang Luo<sup>3</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1</sup></p>
+  <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Ziyang Luo<sup>3</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1</sup></p>
   <p><sub><sup>1</sup> National University of Singapore &nbsp;·&nbsp; <sup>2</sup> Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup> Hong Kong Baptist University</sub></p>
 </div>
 
@@ -83,6 +83,9 @@ Select a card to jump directly to its section.
 > [!NOTE]
 > **What current evidence shows.** Existing experiments demonstrate behavioral gains, some later-learning benefits, and local procedure improvements, with detailed hardware evidence concentrated in manipulation. Isolating the causal chain that recursion requires is the next step.
 
+<p align="center"><img src="assets/readme/figures/figure-5.png" width="900" alt="Figure 5. Does a revised component help the next learner? Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately."></p>
+<p align="center"><sub><b>Figure 5. Does a revised component help the next learner?</b> Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately.</sub></p>
+
 <details>
 <summary><b>Survey outline</b></summary>
 
@@ -121,6 +124,9 @@ The same physical experience can leave very different kinds of change behind, an
 
 <p align="center"><img src="assets/readme/figures/figure-3.png" width="900" alt="Figure 3. Four later uses of acquired change. Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater."></p>
 <p align="center"><sub><b>Figure 3. Four later uses of acquired change.</b> Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater.</sub></p>
+
+<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW. SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data."></p>
+<p align="center"><sub><b>Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</b> SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data.</sub></p>
 
 <p align="right"><sub><a href="#repository-guide">↑ Back to guide</a></sub></p>
 
@@ -648,7 +654,7 @@ If you find the survey or the reference library useful, please cite:
 ```bibtex
 @misc{luo2026physicalrsi,
   title        = {From Physical Experience to Recursive Self-Improvement: Mechanisms, Evidence, and Open Problems in Physical AI},
-  author       = {Luo, Meng and Song, Jiajia and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
+  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
   howpublished = {\url{https://github.com/Eurekaleo/awesome-physical-ai-rsi}},
   note         = {Manuscript}

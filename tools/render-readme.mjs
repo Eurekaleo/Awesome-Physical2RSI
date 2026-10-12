@@ -220,6 +220,7 @@ export function renderReadme(references) {
   backLinks = true;
   add(...figure(2));
   add("> [!NOTE]", `> **What current evidence shows.** ${EVIDENCE}`, "");
+  add(...figure(5));
   add("<details>", "<summary><b>Survey outline</b></summary>", "", "| § | Chapter | Covers |", "| :-: | --- | --- |");
   for (const [number, chapter, covers] of OUTLINE) add(`| ${number} | **${chapter}** | ${covers} |`);
   add("", "</details>", "");
@@ -234,6 +235,7 @@ export function renderReadme(references) {
   for (const [use, change, next, claim, chapter] of USES) add(`| **${use}** | ${change} | ${next} | ${claim} | ${chapter} |`);
   add("");
   add(...figure(3));
+  add(...figure(4));
 
   heading("Toward recursive self-improvement");
   add(...figure(6));

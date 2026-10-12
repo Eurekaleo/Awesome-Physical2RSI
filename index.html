@@ -149,7 +149,7 @@
             <p class="hero-eyebrow"><span class="status-dot"></span>Physical2RSI · A survey &amp; reference library</p>
             <h1 id="project-title">From Physical Experience to <span>Recursive Self&#8209;Improvement</span></h1>
             <p class="hero-subtitle">Mechanisms, Evidence, and Open Problems in Physical AI</p>
-            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Jiajia Song<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Ziyang Luo<sup>3</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1</sup></span></p>
+            <p class="hero-authors"><span>Meng Luo<sup>1</sup></span><span>Zechen Bai<sup>1</sup></span><span>Shanqing Xu<sup>2</sup></span><span>Yanlin Li<sup>1</sup></span><span>Kaixin Li<sup>1</sup></span><span>Mengchen Qian<sup>2</sup></span><span>Ziyang Luo<sup>3</sup></span><span>Wei Chen<sup>2</sup></span><span>Hongzhan Lin<sup>1</sup></span></p>
             <p class="hero-affiliations"><span><sup>1</sup>National University of Singapore</span><span><sup>2</sup>Huazhong University of Science and Technology</span><span><sup>3</sup>Hong Kong Baptist University</span></p>
             <div class="hero-actions">
               <a href="#survey" class="button button-gold">Read the survey<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
@@ -220,13 +220,17 @@
                 <p class="block-eyebrow"><span>03</span>The review at a glance</p>
                 <h3 class="block-title">Four uses, four conditions, four claims</h3>
               </div>
-              <img class="block-art" src="assets/art/outcome.webp" width="409" height="480" loading="lazy" decoding="async" alt="" />
+              <img class="block-art" src="assets/art/compare.webp" width="480" height="437" loading="lazy" decoding="async" alt="" />
             </div>
             <figure class="survey-figure">
               <img src="assets/readme/figures/figure-2.png" width="1600" height="882" loading="lazy" decoding="async" alt="Figure 2. The review at a glance." />
               <figcaption><strong>Figure 2. The review at a glance.</strong> The rows give the four uses of an acquired change (Sections 3–6), the four conditions for carrying it into the next round, and the four claims a comparison can establish. Illustrations show the grasping robot’s four breakdowns from Section 1.</figcaption>
             </figure>
             <p class="evidence-note"><strong>What current evidence shows.</strong> Existing experiments demonstrate behavioral gains, some later-learning benefits, and local procedure improvements, with detailed hardware evidence concentrated in manipulation. Isolating the causal chain that recursion requires is the next step.</p>
+            <figure class="survey-figure">
+              <img src="assets/readme/figures/figure-5.png" width="1600" height="501" loading="lazy" decoding="async" alt="Figure 5. Does a revised component help the next learner?" />
+              <figcaption><strong>Figure 5. Does a revised component help the next learner?</strong> Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately.</figcaption>
+            </figure>
           </div>
           <div class="survey-block" id="survey-uses" data-reveal data-chapter="Four uses of acquired change">
             <div class="block-head">
@@ -266,6 +270,17 @@
               <img src="assets/readme/figures/figure-3.png" width="1600" height="783" loading="lazy" decoding="async" alt="Figure 3. Four later uses of acquired change." />
               <figcaption><strong>Figure 3. Four later uses of acquired change.</strong> Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater.</figcaption>
             </figure>
+            <h4 class="systems-title">Four systems where models, policies, and physical data change</h4>
+            <div class="system-grid">
+              <article class="system-card"><img class="system-art" src="assets/art/silvr.webp" width="480" height="360" loading="lazy" decoding="async" alt="" /><div><h5>SILVR</h5><p>Real-robot collection and planner revision</p></div></article>
+              <article class="system-card"><img class="system-art" src="assets/art/rise.webp" width="480" height="396" loading="lazy" decoding="async" alt="" /><div><h5>RISE</h5><p>Improve a policy inside fixed learned models</p></div></article>
+              <article class="system-card"><img class="system-art" src="assets/art/playworld.webp" width="480" height="390" loading="lazy" decoding="async" alt="" /><div><h5>PlayWorld</h5><p>Acquire play data, fit a model, then optimize a noise policy</p></div></article>
+              <article class="system-card"><img class="system-art" src="assets/art/vlaw.webp" width="480" height="358" loading="lazy" decoding="async" alt="" /><div><h5>VLAW</h5><p>Update the world model, then the policy; repeat with new physical data</p></div></article>
+            </div>
+            <figure class="survey-figure">
+              <img src="assets/readme/figures/figure-4.png" width="1600" height="1253" loading="lazy" decoding="async" alt="Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW." />
+              <figcaption><strong>Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</strong> SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data.</figcaption>
+            </figure>
           </div>
           <div class="survey-block" id="survey-recursion" data-reveal data-chapter="Toward recursive self-improvement">
             <div class="block-head">
@@ -280,10 +295,10 @@
               <figcaption><strong>Figure 6. Testing the two links of recursive self-improvement.</strong> Top: does acquired repair knowledge make the reviser produce a better learning procedure on common new failures? Bottom: does a self-revision proposed with that knowledge beat one proposed with it frozen? The diagram specifies proposed comparisons, not reported results.</figcaption>
             </figure>
             <ul class="recursion-list">
-              <li><strong>Useful results and revised procedures can already help the next learner.</strong> Later-learning benefits and local procedure improvements are tested in several physical and simulated comparisons.</li>
-              <li><strong>Repair knowledge can improve the reviser.</strong> Testing this first link requires comparing the reviser with its earlier and its acquired repair knowledge.</li>
-              <li><strong>The improved reviser must help improve itself.</strong> This second link must hold under the same physical constraints that sustain ordinary learning.</li>
-              <li><strong>Where to start.</strong> Reward construction or skill-library editing: their revisions are inspectable, can be screened in simulation, and can then be confirmed on hardware through matched later learners. Eureka (a reward reviser whose knowledge does not change) and PRACTICE (a learned skill editor whose own reviser is fixed) already supply baselines.</li>
+              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>Useful results and revised procedures can already help the next learner.</strong> Later-learning benefits and local procedure improvements are tested in several physical and simulated comparisons.</div></li>
+              <li><img class="recursion-art" src="assets/art/reviser.webp" width="475" height="480" loading="lazy" decoding="async" alt="" /><div><strong>Repair knowledge can improve the reviser.</strong> Testing this first link requires comparing the reviser with its earlier and its acquired repair knowledge.</div></li>
+              <li><img class="recursion-art" src="assets/art/selfrevise.webp" width="480" height="420" loading="lazy" decoding="async" alt="" /><div><strong>The improved reviser must help improve itself.</strong> This second link must hold under the same physical constraints that sustain ordinary learning.</div></li>
+              <li><span class="recursion-dot" aria-hidden="true"></span><div><strong>Where to start.</strong> Reward construction or skill-library editing: their revisions are inspectable, can be screened in simulation, and can then be confirmed on hardware through matched later learners. Eureka (a reward reviser whose knowledge does not change) and PRACTICE (a learned skill editor whose own reviser is fixed) already supply baselines.</div></li>
             </ul>
           </div>
           <div class="survey-block" id="survey-problems" data-reveal data-chapter="Open problems">
@@ -350,7 +365,7 @@
             </div>
             <pre id="survey-bibtex"><code>@misc{luo2026physicalrsi,
   title        = {From Physical Experience to Recursive Self-Improvement: Mechanisms, Evidence, and Open Problems in Physical AI},
-  author       = {Luo, Meng and Song, Jiajia and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
+  author       = {Luo, Meng and Bai, Zechen and Xu, Shanqing and Li, Yanlin and Li, Kaixin and Qian, Mengchen and Luo, Ziyang and Chen, Wei and Lin, Hongzhan},
   year         = {2026},
   howpublished = {\url{https://github.com/Eurekaleo/awesome-physical-ai-rsi}},
   note         = {Manuscript}
