@@ -2,7 +2,7 @@
 
 ## Current release
 
-The manuscript is not yet public. With the authors' approval, the README and the website's survey section carry a summary of the survey: the title and subtitle, author names and affiliations, the research questions, the framework and its four conditions, Figures 1 to 6, the survey's robot illustrations, the open problems, a teaser illustration, and a manuscript citation. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the manuscript.
+The manuscript is not yet public. With the authors' approval, the README and the website's survey section carry a summary of the survey: the title and subtitle, author names and affiliations, the research questions, the framework and its four conditions, Figures 1 to 9, the survey's robot illustrations, the open problems, a teaser illustration, and a manuscript citation. The text lives in `tools/survey-content.mjs` and the figures in `assets/readme/figures/`; `npm run readme` renders both the README and the website section, and `tools/check.mjs` fails if either is out of date. Keep the content in step with the manuscript.
 
 Until the paper is public, the site carries no scholarly metadata (`citation_*` meta tags or `ScholarlyArticle` structured data), and the checks continue to enforce this. No manuscript PDF, source, or other figure is published.
 

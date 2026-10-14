@@ -53,7 +53,7 @@ Use **From Physical Experience to Recursive Self-Improvement** (the survey's tit
 
 ## Visual assets and licensing
 
-Record each public asset's origin and usage terms in `assets/CREDITS.md`. Figures 1 to 6 of the survey and its robot illustrations appear in the README and on the website with the authors' approval (`assets/readme/figures/`); do not add other manuscript figures without the same approval. The README's section icons and cards are drawn by `node tools/draw-readme-art.mjs`, and the README banner and sharing image by `node tools/draw-banners.mjs` (it needs Chrome, Chromium or Edge); run them after changing their text, colours or the teaser, and commit the results. The MIT license applies to this repository's original software and accompanying technical documentation. Third-party images, fonts, publication text, and linked works retain their own licenses and rights.
+Record each public asset's origin and usage terms in `assets/CREDITS.md`. Figures 1 to 9 of the survey and its robot illustrations appear in the README and on the website with the authors' approval (`assets/readme/figures/`); do not add other manuscript figures without the same approval. The README's section icons and cards are drawn by `node tools/draw-readme-art.mjs`, and the README banner and sharing image by `node tools/draw-banners.mjs` (it needs Chrome, Chromium or Edge); run them after changing their text, colours or the teaser, and commit the results. The MIT license applies to this repository's original software and accompanying technical documentation. Third-party images, fonts, publication text, and linked works retain their own licenses and rights.
 
 ## Publication
 

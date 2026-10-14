@@ -16,6 +16,7 @@ import {
   CONDITIONS_NOTE,
   EVIDENCE,
   FIGURES,
+  FIGURE_FILE,
   OUTLINE,
   PROBLEMS,
   PROGRAMS,
@@ -115,8 +116,8 @@ function anchor(heading) {
 function figure(number) {
   const [title, caption] = FIGURES[number];
   return [
-    `<p align="center"><img src="assets/readme/figures/figure-${number}.png" width="900" alt="Figure ${number}. ${html(title)} ${html(caption)}"></p>`,
-    `<p align="center"><sub><b>Figure ${number}. ${html(title)}</b> ${html(caption)}</sub></p>`,
+    `<p align="center"><img src="${FIGURE_FILE(number)}" width="900" alt="Figure ${number}. ${html(title)}${caption ? ` ${html(caption)}` : ""}"></p>`,
+    `<p align="center"><sub><b>Figure ${number}. ${html(title)}</b>${caption ? ` ${html(caption)}` : ""}</sub></p>`,
     "",
   ];
 }
@@ -179,6 +180,7 @@ export function renderReadme(references) {
   for (const [name, text] of CONDITIONS) add(`> - **${name}:** ${text}`);
   add(">", `> ${CONDITIONS_NOTE}`, "");
   add(...figure(1));
+  add(...figure(2));
 
   heading("Research questions");
   add("| | Question | What it asks |", "| :-: | --- | --- |");
@@ -218,9 +220,9 @@ export function renderReadme(references) {
 
   heading("The review at a glance");
   backLinks = true;
-  add(...figure(2));
+  add(...figure(3));
   add("> [!NOTE]", `> **What current evidence shows.** ${EVIDENCE}`, "");
-  add(...figure(5));
+  add(...figure(8));
   add("<details>", "<summary><b>Survey outline</b></summary>", "", "| § | Chapter | Covers |", "| :-: | --- | --- |");
   for (const [number, chapter, covers] of OUTLINE) add(`| ${number} | **${chapter}** | ${covers} |`);
   add("", "</details>", "");
@@ -234,11 +236,13 @@ export function renderReadme(references) {
   );
   for (const [use, change, next, claim, chapter] of USES) add(`| **${use}** | ${change} | ${next} | ${claim} | ${chapter} |`);
   add("");
-  add(...figure(3));
   add(...figure(4));
+  add(...figure(5));
+  add(...figure(6));
+  add(...figure(7));
 
   heading("Toward recursive self-improvement");
-  add(...figure(6));
+  add(...figure(9));
   for (const [lead, text] of RECURSION) add(`- **${lead}** ${text}`);
   add("");
 

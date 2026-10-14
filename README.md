@@ -37,8 +37,11 @@ To see what present systems establish, the survey follows acquired changes (poli
 >
 > This view explains why successful data collection may yield poor teaching data, and why more accurate prediction may fail to improve control.
 
-<p align="center"><img src="assets/readme/figures/figure-1.png" width="900" alt="Figure 1. Learning behavior and learning how to improve it. The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."></p>
-<p align="center"><sub><b>Figure 1. Learning behavior and learning how to improve it.</b> The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-1.webp" width="900" alt="Figure 1. From digital to physical recursive self-improvement. Digital RSI supplies the mechanisms of recursive improvement; physical RSI tests how they use physical experience and whether they hold under physical constraints. Numbers mark the four places where experience leaves a change; recursion would begin at the fourth."></p>
+<p align="center"><sub><b>Figure 1. From digital to physical recursive self-improvement.</b> Digital RSI supplies the mechanisms of recursive improvement; physical RSI tests how they use physical experience and whether they hold under physical constraints. Numbers mark the four places where experience leaves a change; recursion would begin at the fourth.</sub></p>
+
+<p align="center"><img src="assets/readme/figures/figure-2.png" width="900" alt="Figure 2. Learning behavior and learning how to improve it. The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."></p>
+<p align="center"><sub><b>Figure 2. Learning behavior and learning how to improve it.</b> The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made.</sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/icons/questions-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/icons/questions-light.svg"><img src="assets/readme/icons/questions-light.svg" alt="" width="36" align="left"></picture>
 
@@ -77,14 +80,14 @@ Select a card to jump directly to its section.
 
 ## The review at a glance
 
-<p align="center"><img src="assets/readme/figures/figure-2.png" width="900" alt="Figure 2. The review at a glance. The rows give the four uses of an acquired change (Sections 3–6), the four conditions for carrying it into the next round, and the four claims a comparison can establish. Illustrations show the grasping robot’s four breakdowns from Section 1."></p>
-<p align="center"><sub><b>Figure 2. The review at a glance.</b> The rows give the four uses of an acquired change (Sections 3–6), the four conditions for carrying it into the next round, and the four claims a comparison can establish. Illustrations show the grasping robot’s four breakdowns from Section 1.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-3.png" width="900" alt="Figure 3. The review at a glance. Illustrations in (b) show the four grasp breakdowns from Section 1."></p>
+<p align="center"><sub><b>Figure 3. The review at a glance.</b> Illustrations in (b) show the four grasp breakdowns from Section 1.</sub></p>
 
 > [!NOTE]
 > **What current evidence shows.** Existing experiments demonstrate behavioral gains, some later-learning benefits, and local procedure improvements, with detailed hardware evidence concentrated in manipulation. Isolating the causal chain that recursion requires is the next step.
 
-<p align="center"><img src="assets/readme/figures/figure-5.png" width="900" alt="Figure 5. Does a revised component help the next learner? Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately."></p>
-<p align="center"><sub><b>Figure 5. Does a revised component help the next learner?</b> Earlier and revised versions guide matched learners under a common outcome test. New tasks additionally test forward transfer, old-task tests measure retention, and acquisition cost is counted separately.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-8.png" width="900" alt="Figure 8. Does a revised component help the next learner? Illustrated with an evaluator."></p>
+<p align="center"><sub><b>Figure 8. Does a revised component help the next learner?</b> Illustrated with an evaluator.</sub></p>
 
 <details>
 <summary><b>Survey outline</b></summary>
@@ -122,11 +125,17 @@ The same physical experience can leave very different kinds of change behind, an
 | **Reuse and recovery** | Memory, skill, contract, program | Retrieve, recover, or synthesize | Reusable execution knowledge | §5 External knowledge |
 | **Learning procedure** | Collector, evaluator, editor, updater | Choose experience, judge, or construct updates | Better subsequent learning | §6 Learning procedure updates |
 
-<p align="center"><img src="assets/readme/figures/figure-3.png" width="900" alt="Figure 3. Four later uses of acquired change. Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater."></p>
-<p align="center"><sub><b>Figure 3. Four later uses of acquired change.</b> Each column gives the retained change and its immediate use (Table 3). Dashed arrows show secondary handoffs: a policy may become a collector, a model may supply judgments, and memory may guide an updater.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Four uses of acquired change. Each row follows one use in the grasp example from physical experience to the retained change and its immediate use; the italic line names the principal claim. Dashed tags mark secondary handoffs into the learning procedure."></p>
+<p align="center"><sub><b>Figure 4. Four uses of acquired change.</b> Each row follows one use in the grasp example from physical experience to the retained change and its immediate use; the italic line names the principal claim. Dashed tags mark secondary handoffs into the learning procedure.</sub></p>
 
-<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW. SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data."></p>
-<p align="center"><sub><b>Figure 4. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</b> SILVR fixes inverse dynamics on hardware but updates it in Meta-World; RISE and PlayWorld optimize policies inside fixed models; VLAW refits its model on physical rollouts before generating policy data.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-5.png" width="900" alt="Figure 5. Four teaching signals from physical experience. Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section."></p>
+<p align="center"><sub><b>Figure 5. Four teaching signals from physical experience.</b> Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section.</sub></p>
+
+<p align="center"><img src="assets/readme/figures/figure-6.png" width="900" alt="Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW."></p>
+<p align="center"><sub><b>Figure 6. Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.</b></sub></p>
+
+<p align="center"><img src="assets/readme/figures/figure-7.png" width="900" alt="Figure 7. Three forms of external knowledge in the grasp example. Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface."></p>
+<p align="center"><sub><b>Figure 7. Three forms of external knowledge in the grasp example.</b> Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface.</sub></p>
 
 <p align="right"><sub><a href="#repository-guide">↑ Back to guide</a></sub></p>
 
@@ -134,8 +143,8 @@ The same physical experience can leave very different kinds of change behind, an
 
 ## Toward recursive self-improvement
 
-<p align="center"><img src="assets/readme/figures/figure-6.png" width="900" alt="Figure 6. Testing the two links of recursive self-improvement. Top: does acquired repair knowledge make the reviser produce a better learning procedure on common new failures? Bottom: does a self-revision proposed with that knowledge beat one proposed with it frozen? The diagram specifies proposed comparisons, not reported results."></p>
-<p align="center"><sub><b>Figure 6. Testing the two links of recursive self-improvement.</b> Top: does acquired repair knowledge make the reviser produce a better learning procedure on common new failures? Bottom: does a self-revision proposed with that knowledge beat one proposed with it frozen? The diagram specifies proposed comparisons, not reported results.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement."></p>
+<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement.</b></sub></p>
 
 - **Useful results and revised procedures can already help the next learner.** Later-learning benefits and local procedure improvements are tested in several physical and simulated comparisons.
 - **Repair knowledge can improve the reviser.** Testing this first link requires comparing the reviser with its earlier and its acquired repair knowledge.

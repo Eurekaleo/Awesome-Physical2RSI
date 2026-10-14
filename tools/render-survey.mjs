@@ -17,6 +17,7 @@ import {
   CONDITIONS_NOTE,
   EVIDENCE,
   FIGURES,
+  FIGURE_FILE,
   PROBLEMS,
   PROGRAMS,
   QUESTIONS,
@@ -62,11 +63,11 @@ function inline(value) {
 
 function figure(number) {
   const [title, caption] = FIGURES[number];
-  const [width, height] = imageSize(`assets/readme/figures/figure-${number}.png`);
+  const [width, height] = imageSize(FIGURE_FILE(number));
   return [
     '<figure class="survey-figure">',
-    `  <img src="assets/readme/figures/figure-${number}.png" width="${width}" height="${height}" loading="lazy" decoding="async" alt="Figure ${number}. ${html(title)}" />`,
-    `  <figcaption><strong>Figure ${number}. ${html(title)}</strong> ${html(caption)}</figcaption>`,
+    `  <img src="${FIGURE_FILE(number)}" width="${width}" height="${height}" loading="lazy" decoding="async" alt="Figure ${number}. ${html(title)}" />`,
+    `  <figcaption><strong>Figure ${number}. ${html(title)}</strong>${caption ? ` ${html(caption)}` : ""}</figcaption>`,
     "</figure>",
   ];
 }
@@ -149,6 +150,7 @@ export function renderSurveySection() {
     "  </aside>",
     "</div>",
     ...figure(1),
+    ...figure(2),
   ];
   const questions = [
     '<ol class="question-grid">',
@@ -156,9 +158,9 @@ export function renderSurveySection() {
     "</ol>",
   ];
   const framework = [
-    ...figure(2),
+    ...figure(3),
     `<p class="evidence-note"><strong>What current evidence shows.</strong> ${html(EVIDENCE)}</p>`,
-    ...figure(5),
+    ...figure(8),
   ];
   const uses = ['<div class="use-grid">'];
   for (const [i, [use, change, next, claim, chapter]] of USES.entries())
@@ -170,12 +172,12 @@ export function renderSurveySection() {
       `    <dl><div><dt>Retained change</dt><dd>${html(change)}</dd></div><div><dt>Immediate use</dt><dd>${html(next)}</dd></div><div><dt>Principal claim</dt><dd>${html(claim)}</dd></div></dl>`,
       "  </article>",
     );
-  uses.push("</div>", ...figure(3), '<h4 class="systems-title">Four systems where models, policies, and physical data change</h4>', '<div class="system-grid">');
+  uses.push("</div>", ...figure(4), ...figure(5), ...figure(7), '<h4 class="systems-title">Four systems where models, policies, and physical data change</h4>', '<div class="system-grid">');
   for (const [key, name, summary] of SYSTEMS)
     uses.push(`  <article class="system-card">${art(key, "system-art")}<div><h5>${html(name)}</h5><p>${html(summary)}</p></div></article>`);
-  uses.push("</div>", ...figure(4));
+  uses.push("</div>", ...figure(6));
   const recursion = [
-    ...figure(6),
+    ...figure(9),
     '<ul class="recursion-list">',
     ...RECURSION.map(([lead, text], i) => `  <li>${RECURSION_ART[i] ? art(RECURSION_ART[i], "recursion-art") : '<span class="recursion-dot" aria-hidden="true"></span>'}<div><strong>${html(lead)}</strong> ${html(text)}</div></li>`),
     "</ul>",

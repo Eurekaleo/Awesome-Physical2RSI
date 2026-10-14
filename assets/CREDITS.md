@@ -2,7 +2,7 @@
 
 ## Survey figures
 
-`readme/figures/figure-1.png` to `figure-6.png` are Figures 1 to 6 of the survey *From Physical Experience to Recursive Self-Improvement*, rendered from the manuscript. They are © 2026 the authors and appear in the README with the authors' approval. They are not covered by this repository's code license.
+`readme/figures/figure-1.webp` and `figure-2.png` to `figure-9.png` are Figures 1 to 9 of the survey *From Physical Experience to Recursive Self-Improvement*, rendered from the manuscript. They are © 2026 the authors and appear in the README with the authors' approval. They are not covered by this repository's code license.
 
 ## Survey robot illustrations
 
