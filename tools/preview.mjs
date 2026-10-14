@@ -43,7 +43,10 @@ const server = createServer(async (request, response) => {
     const pathname = decodeURIComponent(
       new URL(request.url, "http://localhost").pathname,
     );
-    if (pathname === "/" || pathname === prefix.slice(0, -1)) {
+    if (
+      prefix !== "/" &&
+      (pathname === "/" || pathname === prefix.slice(0, -1))
+    ) {
       response.writeHead(302, { Location: prefix }).end();
       return;
     }

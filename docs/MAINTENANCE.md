@@ -43,7 +43,7 @@ npm run build
 npm run preview -- --port 4173
 ```
 
-The server binds to `127.0.0.1` and serves `/Awesome-Physical2RSI/`. If the requested port is occupied, it uses the next available port and prints the resulting URL. The preview server serves only `dist/` and does not list directories.
+The server binds to `127.0.0.1` and serves `/`, matching the organization website. If the requested port is occupied, it uses the next available port and prints the resulting URL. The preview server serves only `dist/` and does not list directories.
 
 ## Project identity
 

@@ -1,8 +1,8 @@
 # GitHub Pages deployment
 
-Repository: <https://github.com/Eurekaleo/Awesome-Physical2RSI>
+Repository: <https://github.com/Physical2RSI/physical2rsi.github.io>
 
-Website: <https://eurekaleo.github.io/Awesome-Physical2RSI/>
+Website: <https://physical2rsi.github.io/>
 
 ## Initial setup
 
@@ -31,13 +31,15 @@ npm run build
 npm run preview
 ```
 
-After deployment, check the site at its `/Awesome-Physical2RSI/` project path, including a hard reload, a nonexistent URL, mobile navigation, and at least one reference link. Preserve the repository name's capitalization in Pages URLs. Browser caches can retain an older asset briefly after deployment.
+After deployment, check the site at `https://physical2rsi.github.io/`, including a hard reload, a nonexistent URL, mobile navigation, and at least one reference link. The repository name `physical2rsi.github.io` makes this the organization's root website. Browser caches can retain an older asset briefly after deployment.
 
-## Repository renames
+## Repository transfers and renames
 
 GitHub redirects repository links after a rename, but that does not establish a redirect for the previous GitHub Pages path. Keep the canonical URLs and project identity synchronized, redeploy Pages, and verify any separately configured website redirect. Do not create a repository at the previous name solely for a redirect: reusing that name stops GitHub's repository redirect.
 
-Both previous repository names, `awesome-physical-ai` and `awesome-physical-ai-rsi`, use GitHub's automatic redirect to `Awesome-Physical2RSI`. Their previous website paths are handled separately by `awesome-physical-ai/index.html` and `awesome-physical-ai-rsi/index.html` in the account's `Eurekaleo.github.io` repository. Both pages redirect directly to the current site while preserving query parameters and anchors.
+The original repository is transferred to the `Physical2RSI` organization with its full history and existing collaborator access. Its new name, `physical2rsi.github.io`, serves the site at the organization's root URL. GitHub redirects previous repository links to the transferred repository.
+
+The previous website paths, `awesome-physical-ai`, `awesome-physical-ai-rsi`, and `Awesome-Physical2RSI`, are handled separately by matching `index.html` files in the account's `Eurekaleo.github.io` repository. All three pages redirect directly to the organization website while preserving query parameters and anchors. Keep these redirects deployed and do not reuse the old repository names.
 
 After a future rename, update the URLs in `tools/public-files.mjs`, page metadata, `404.html`, `package.json`, `robots.txt`, `sitemap.xml`, issue links, and deployment documentation. Run `npm run readme` to regenerate the README and survey links, then build and redeploy. Update every historical redirect to the new canonical URL and verify those entries in a browser; a successful repository redirect does not verify a Pages redirect.
 
