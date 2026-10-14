@@ -263,10 +263,6 @@ assert(
   idsByFile.get("index.html").has("references"),
   "Reference section is missing",
 );
-assert(
-  idsByFile.get("index.html").has("publication"),
-  "Publication section is missing",
-);
 // The survey summary is generated from tools/survey-content.mjs; the paper itself is not public yet, so the
 // scholarly-metadata checks above still apply.
 assert(

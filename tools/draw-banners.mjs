@@ -61,8 +61,6 @@ h1 em { font-style: normal; color: #125b50; }
   <div class="brand"><img src="${asset("assets/mark.png")}" alt=""><div>Physical<span>2</span>RSI</div></div>
   <h1>${lead}<br>to <em>${rest.replace(" Self-", "<br>Self&#8209;")}</em></h1>
   <p class="subtitle">${SURVEY.subtitle}</p>
-  <div class="rule"></div>
-  <div class="status"><strong>A survey &amp; reference library</strong><i></i>Paper coming soon</div>
 </div>
 <img class="teaser" src="${asset("assets/teaser.webp")}" alt="">
 </body></html>`;

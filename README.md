@@ -5,7 +5,6 @@
   <p><strong><em>⭐ Star us if you find this useful!</em></strong></p>
 
   <a href="https://eurekaleo.github.io/Awesome-Physical2RSI/"><img src="https://img.shields.io/static/v1?label=&amp;message=Project+website&amp;color=087f80&amp;style=flat-square" alt="Project website" height="18"></a>
-  <a href="#publication"><img src="https://img.shields.io/static/v1?label=&amp;message=Paper%3A+coming+soon&amp;color=914252&amp;style=flat-square" alt="Paper: coming soon" height="18"></a>
   <a href="https://eurekaleo.github.io/Awesome-Physical2RSI/#references"><img src="https://img.shields.io/static/v1?label=&amp;message=229+references&amp;color=416cb3&amp;style=flat-square" alt="229 references" height="18"></a>
   <a href="LICENSE"><img src="https://img.shields.io/static/v1?label=&amp;message=Code%3A+MIT&amp;color=65716e&amp;style=flat-square" alt="Code: MIT" height="18"></a>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>
@@ -13,11 +12,6 @@
   <p>Meng Luo<sup>1</sup> · Zechen Bai<sup>1</sup> · Shanqing Xu<sup>2</sup> · Yanlin Li<sup>1</sup> · Kaixin Li<sup>1</sup> · Mengchen Qian<sup>2</sup> · Ziyang Luo<sup>3</sup> · Wei Chen<sup>2</sup> · Hongzhan Lin<sup>1</sup></p>
   <p><sub><sup>1</sup> National University of Singapore &nbsp;·&nbsp; <sup>2</sup> Huazhong University of Science and Technology &nbsp;·&nbsp; <sup>3</sup> Hong Kong Baptist University</sub></p>
 </div>
-
-<a id="publication"></a>
-
-> [!NOTE]
-> The manuscript is not yet public. This page summarizes it with the authors' approval; a link to the paper will follow its release.
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/icons/about-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/icons/about-light.svg"><img src="assets/readme/icons/about-light.svg" alt="" width="36" align="left"></picture>
 

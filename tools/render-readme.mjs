@@ -154,7 +154,6 @@ export function renderReadme(references) {
     "  <p><strong><em>⭐ Star us if you find this useful!</em></strong></p>",
     "",
     `  <a href="${SITE_URL}">${badge("Project website", "087f80")}</a>`,
-    `  <a href="#publication">${badge("Paper: coming soon", "914252")}</a>`,
     `  <a href="${SITE_URL}#references">${badge(`${references.length} references`, "416cb3")}</a>`,
     `  <a href="LICENSE">${badge("Code: MIT", "65716e")}</a>`,
     '  <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome" height="18"></a>',
@@ -166,11 +165,6 @@ export function renderReadme(references) {
       "</p>",
     `  <p><sub>${SURVEY.affiliations.map((name, i) => `<sup>${i + 1}</sup> ${html(name)}`).join(" &nbsp;·&nbsp; ")}</sub></p>`,
     "</div>",
-    "",
-    '<a id="publication"></a>',
-    "",
-    "> [!NOTE]",
-    "> The manuscript is not yet public. This page summarizes it with the authors' approval; a link to the paper will follow its release.",
     "",
   );
 
