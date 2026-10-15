@@ -47,7 +47,7 @@ body { width: ${width}px; height: ${height}px; overflow: hidden; font-family: Ma
 .copy { position: absolute; left: ${Math.round(width * 0.045)}px; top: 50%; transform: translateY(-50%); width: ${Math.round(width - teaserWidth - width * 0.06)}px; }
 .brand { display: flex; align-items: center; gap: 14px; font-size: ${Math.round(titleSize * 0.42)}px; font-weight: 800; color: #125b50; margin-bottom: ${Math.round(titleSize * 0.75)}px; }
 .brand img { width: ${Math.round(titleSize * 0.72)}px; height: ${Math.round(titleSize * 0.72)}px; border-radius: 7px; }
-.brand span { color: #914252; }
+.brand span { background: linear-gradient(170deg, #f2b33a 10%, #d8641c 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
 h1 { margin: 0; font-size: ${titleSize}px; line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; }
 h1 em { font-style: normal; color: #125b50; }
 .subtitle { margin: ${Math.round(titleSize * 0.42)}px 0 ${Math.round(titleSize * 0.5)}px; font-size: ${Math.round(titleSize * 0.4)}px; line-height: 1.45; color: #566760; }

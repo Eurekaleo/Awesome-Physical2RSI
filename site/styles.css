@@ -144,8 +144,18 @@ button {
   font-weight: 800;
   white-space: nowrap;
 }
+/* the 2 in Physical2RSI: gold to orange, the colour of the logo's recursion arrow */
 .brand-accent {
-  color: var(--rose);
+  color: #d8641c;
+  background: linear-gradient(170deg, #f2b33a 10%, #d8641c 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.brand img {
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(23, 43, 40, 0.18);
 }
 .brand-secondary {
   font-weight: 500;

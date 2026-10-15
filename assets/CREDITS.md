@@ -30,4 +30,4 @@ The section icons and cards in `readme/` were created for this repository by `to
 
 ## Project Identity
 
-The geometric P mark, page layout, and banner typography were created for this repository. They do not represent a manuscript framework or research contribution.
+The logo (`mark.png`, `favicon.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`) is a painting in the style of Vincent van Gogh, made with ChatGPT image generation for this project: the survey's robot under a starry sky, circled by a golden arrow that returns to itself. The page layout and banner typography were created for this repository. None of these represent a manuscript framework or research contribution, and they are not covered by this repository's code license.
