@@ -906,13 +906,18 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 .survey-header {
-  max-width: 900px;
   margin: 0 auto 26px;
   text-align: center;
 }
 .survey-header h2 {
-  font-size: 36px;
+  font-size: clamp(26px, 3.2vw, 36px);
   line-height: 1.2;
+  text-wrap: balance;
+}
+@media (min-width: 900px) {
+  .survey-header h2 {
+    white-space: nowrap;
+  }
 }
 .survey-intro {
   display: grid;

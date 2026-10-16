@@ -41,9 +41,9 @@ export const CONDITIONS_NOTE =
 
 export const FIGURES = {
   1: ["From digital to physical recursive self-improvement.", "Digital RSI supplies the mechanisms of recursive improvement; physical RSI tests how they use physical experience and whether they hold under physical constraints. Numbers mark the four places where experience leaves a change; recursion would begin at the fourth."],
-  2: ["Learning behavior and learning how to improve it.", "The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."],
+  2: ["Improving what the robot does and how it learns.", "The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."],
   3: ["The review at a glance.", "Illustrations in (b) show the four grasp breakdowns from Section 1."],
-  4: ["Four uses of acquired change.", "Each row follows one use in the grasp example from physical experience to the retained change and its immediate use; the italic line names the principal claim. Dashed tags mark secondary handoffs into the learning procedure."],
+  4: ["Where an acquired change is kept, and its use.", "Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."],
   5: ["Four teaching signals from physical experience.", "Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section."],
   6: ["Where models, policies, and physical data change in SILVR, RISE, PlayWorld, and VLAW.", ""],
   7: ["Three forms of external knowledge in the grasp example.", "Each panel shows one saved form of the slip repair and representative systems from this section; reuse on another robot first checks the interface."],
