@@ -31,11 +31,11 @@ To see what present systems establish, the survey follows acquired changes (poli
 >
 > This view explains why successful data collection may yield poor teaching data, and why more accurate prediction may fail to improve control.
 
-<p align="center"><img src="assets/readme/figures/figure-1.webp" width="900" alt="Figure 1. From digital to physical recursive self-improvement. Digital RSI supplies the mechanisms of recursive improvement; physical RSI tests how they use physical experience and whether they hold under physical constraints. Numbers mark the four places where experience leaves a change; recursion would begin at the fourth."></p>
-<p align="center"><sub><b>Figure 1. From digital to physical recursive self-improvement.</b> Digital RSI supplies the mechanisms of recursive improvement; physical RSI tests how they use physical experience and whether they hold under physical constraints. Numbers mark the four places where experience leaves a change; recursion would begin at the fourth.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-1.webp" width="900" alt="Figure 1. From digital to physical recursive self-improvement. Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement."></p>
+<p align="center"><sub><b>Figure 1. From digital to physical recursive self-improvement.</b> Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement.</sub></p>
 
-<p align="center"><img src="assets/readme/figures/figure-2.png" width="900" alt="Figure 2. Improving what the robot does and how it learns. The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made."></p>
-<p align="center"><sub><b>Figure 2. Improving what the robot does and how it learns.</b> The left loop applies a fixed recipe; the right route retains repair knowledge that guides later learning. The dashed return asks whether that knowledge also improves how the next revision is made.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-2.png" width="900" alt="Figure 2. Improving what the robot does and how it learns. On the left, the learner improves under a fixed recipe and retains the change in its policy, world model, or external knowledge. On the right, the improver revises the learning procedure using retained repair knowledge; the dashed return asks whether that knowledge improves how the next revision is made (R1), and whether the improver, once improved, then helps produce its own next improvement (R2). The bottom row lists the physical limits behind the four conditions that let gains carry forward."></p>
+<p align="center"><sub><b>Figure 2. Improving what the robot does and how it learns.</b> On the left, the learner improves under a fixed recipe and retains the change in its policy, world model, or external knowledge. On the right, the improver revises the learning procedure using retained repair knowledge; the dashed return asks whether that knowledge improves how the next revision is made (R1), and whether the improver, once improved, then helps produce its own next improvement (R2). The bottom row lists the physical limits behind the four conditions that let gains carry forward.</sub></p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/readme/icons/questions-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/readme/icons/questions-light.svg"><img src="assets/readme/icons/questions-light.svg" alt="" width="36" align="left"></picture>
 
@@ -80,8 +80,8 @@ Select a card to jump directly to its section.
 > [!NOTE]
 > **What current evidence shows.** Existing experiments demonstrate behavioral gains, some later-learning benefits, and local procedure improvements, with detailed hardware evidence concentrated in manipulation. Isolating the causal chain that recursion requires is the next step.
 
-<p align="center"><img src="assets/readme/figures/figure-8.png" width="900" alt="Figure 8. Does a revised component help the next learner? Illustrated with an evaluator."></p>
-<p align="center"><sub><b>Figure 8. Does a revised component help the next learner?</b> Illustrated with an evaluator.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-8.png" width="900" alt="Figure 8. Does a revised component help the next learner? Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners&#39; outcomes tests procedure improvement."></p>
+<p align="center"><sub><b>Figure 8. Does a revised component help the next learner?</b> Two matched learners differ only in the component under test, here an evaluator. Their common outcome check stays fixed and separate from that evaluator; comparing the learners&#39; outcomes tests procedure improvement.</sub></p>
 
 <details>
 <summary><b>Survey outline</b></summary>
@@ -119,8 +119,8 @@ The same physical experience can leave very different kinds of change behind, an
 | **Reuse and recovery** | Memory, skill, contract, program | Retrieve, recover, or synthesize | Reusable execution knowledge | §5 External knowledge |
 | **Learning procedure** | Collector, evaluator, editor, updater | Choose experience, judge, or construct updates | Better subsequent learning | §6 Learning procedure updates |
 
-<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where an acquired change is kept, and its use. Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."></p>
-<p align="center"><sub><b>Figure 4. Where an acquired change is kept, and its use.</b> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</sub></p>
+<p align="center"><img src="assets/readme/figures/figure-4.png" width="900" alt="Figure 4. Where a retained change is kept, and its use. Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure."></p>
+<p align="center"><sub><b>Figure 4. Where a retained change is kept, and its use.</b> Each row follows the grasp example from physical experience to the retained change and its immediate use; the italic line names the use. Dashed tags mark secondary handoffs into the learning procedure.</sub></p>
 
 <p align="center"><img src="assets/readme/figures/figure-5.png" width="900" alt="Figure 5. Four teaching signals from physical experience. Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section."></p>
 <p align="center"><sub><b>Figure 5. Four teaching signals from physical experience.</b> Each column follows the grasp example: what was experienced, what the signal changes in the training data, and representative systems from this section.</sub></p>
@@ -137,8 +137,8 @@ The same physical experience can leave very different kinds of change behind, an
 
 ## Toward recursive self-improvement
 
-<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement."></p>
-<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement.</b></sub></p>
+<p align="center"><img src="assets/readme/figures/figure-9.png" width="900" alt="Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2). In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check."></p>
+<p align="center"><sub><b>Figure 9. A proposed test of the two links of recursive self-improvement (R1 and R2).</b> In R2, self-revision with frozen or acquired knowledge first produces the control or next improver, respectively. Each then revises a learning procedure, tested through fresh matched learners under a common, protected outcome check.</sub></p>
 
 - **Useful results and revised procedures can already help the next learner.** Later-learning benefits and local procedure improvements are tested in several physical and simulated comparisons.
 - **Repair knowledge can improve the reviser.** Testing this first link requires comparing the reviser with its earlier and its acquired repair knowledge.
