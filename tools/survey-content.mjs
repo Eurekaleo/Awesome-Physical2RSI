@@ -2,8 +2,8 @@
 // Keep wording in step with the manuscript; tools/render-readme.mjs lays it out.
 
 export const SURVEY = {
-  title: "From Physical Experience to Recursive Self-Improvement",
-  subtitle: "Mechanisms, Evidence, and Open Problems in Physical AI",
+  title: "Toward Recursive Self-Improvement in Physical AI",
+  subtitle: "Foundations, Mechanisms, and Open Problems",
   year: 2026,
   // [name, affiliation numbers]
   authors: [
@@ -22,22 +22,23 @@ export const SURVEY = {
 };
 
 export const ABOUT = [
-  "What turns physical experience from a source of better behavior into a source of better learning? A correction can teach a motion, " +
-    "contact can reveal dynamics, and a recovery can become a reusable skill; the harder question is whether knowledge of *why* these changes " +
-    "worked can improve the procedure that produces the next change. The survey reserves *recursive self-improvement* (RSI) for a stronger " +
-    "relation: knowledge from earlier repairs improves the capability that revises that procedure, and the improved capability then helps improve itself.",
-  "To see what present systems establish, the survey follows acquired changes (policies, predictive models, reusable skills, software, and " +
-    "changes to collection, supervision, or updating) into their next use.",
+  "*Recursive self-improvement* (RSI) describes a system that improves not only its behavior but also the process by which it improves. " +
+    "Recent digital agents test this idea by rewriting their own code and checking each version with executable tests. Bringing these mechanisms " +
+    "into the physical world requires learning from partial observations through costly trials, while accounting for changing operating conditions " +
+    "and potentially irreversible consequences.",
+  "The survey positions RSI within robot learning and synthesizes pathways from improving robot capabilities to improving the processes that " +
+    "generate them. It examines how physical experience can strengthen these improvement mechanisms, and when the resulting gains can support " +
+    "further self-improvement of the mechanisms themselves.",
 ];
 
 export const CONDITIONS = [
-  ["Signal specificity", "does the feedback address what the learner still lacks?"],
-  ["Recipient compatibility", "can the receiving component use the change?"],
-  ["Round-to-round shift", "does its value survive later changes in behavior and in the system?"],
-  ["Physical continuation", "can informative trials continue under sensing, reset, safety, and resource limits?"],
+  ["Informative feedback", "does experience distinguish the remaining learning need?"],
+  ["Usability", "can the receiving component represent, optimize, and execute the change?"],
+  ["Distribution shift", "does the change stay useful as the policy, model, task, or hardware changes, including changes caused by improvement itself?"],
+  ["Continued practice", "does another informative trial remain safe and affordable?"],
 ];
 export const CONDITIONS_NOTE =
-  "This view explains why successful data collection may yield poor teaching data, and why more accurate prediction may fail to improve control.";
+  "Component-level proxies are not downstream value: collection success says little about training value when kept trajectories omit the action a learner lacks, and prediction or evaluator accuracy says little when the optimizer or controller cannot use the distinction.";
 
 export const FIGURES = {
   1: ["From digital to physical recursive self-improvement.", "Numbers mark where experience leaves a change: policy (1), world model (2), and external knowledge (3) improve what the robot does; the learning procedure (4) changes how it learns; and the improver, drawn as the loop around the procedure, revises it. RSI further requires that repair knowledge improve the improver and that the improver, once improved, help produce its own next improvement."],
@@ -54,65 +55,58 @@ export const FIGURES = {
 export const FIGURE_FILE = (number) => `assets/readme/figures/figure-${number}.${number === 1 ? "webp" : "png"}`;
 
 export const QUESTIONS = [
-  ["RQ1", "What limits the next improvement?", "Is useful experience missing, or is progress limited by supervision, optimization, action generation, interfaces, or retention?"],
+  ["RQ1", "What limits a robot's next improvement?", "Is useful experience missing, or is progress limited by supervision, optimization, action generation, interfaces, or retention?"],
   ["RQ2", "Which changes address that limitation?", "How does experience change behavior, reusable models or skills, and the collection, supervision, curriculum, or update procedures used in later learning?"],
-  ["RQ3", "When can improvements build on one another?", "What lets one round improve the next, and what causes saturation, drift, or regression?"],
-  ["RQ4", "What changes in the physical world?", "How do sensing, embodiment, reset, safety, cost, and hardware changes constrain the process?"],
+  ["RQ3", "When can improvements build on one another?", "When do improvements carry forward into better learning procedures and improvers, and what evidence would establish recursive self-improvement?"],
+  ["RQ4", "What makes self-improvement different in the physical world?", "How do sensing, embodiment, reset, safety, cost, and hardware changes constrain the process?"],
 ];
 
-// Table 3 of the manuscript, with the chapter that discusses each use
+// The manuscript's table of the four uses of retained change, with the section that discusses each use
 export const USES = [
-  ["Behavior", "Policy, value, residual", "Execute or choose actions", "Better task behavior", "§3 Policy updates"],
-  ["Prediction and practice", "Dynamics or world model", "Plan or supply training experience", "Better decisions or learning", "§4 World models"],
-  ["Reuse and recovery", "Memory, skill, contract, program", "Retrieve, recover, or synthesize", "Reusable execution knowledge", "§5 External knowledge"],
-  ["Learning procedure", "Collector, evaluator, editor, updater", "Choose experience, judge, or construct updates", "Better subsequent learning", "§6 Learning procedure updates"],
+  ["Behavior", "Policy, value, residual", "Execute or choose actions", "Better task behavior", "§3.1.1 Policy updates"],
+  ["Prediction and practice", "Dynamics or world model", "Plan or supply training experience", "Better decisions or learning", "§3.1.2 World models"],
+  ["Reuse and recovery", "Memory, skill, contract, program", "Retrieve, recover, or synthesize", "Reusable execution knowledge", "§3.1.3 Memories, skills, code"],
+  ["Learning procedure", "Collector, evaluator, editor, updater", "Choose experience, judge, or construct updates", "Better subsequent learning", "§3.2 Learning procedures"],
 ];
 
 export const EVIDENCE =
-  "Existing experiments demonstrate behavioral gains, some later-learning benefits, and local procedure improvements, with detailed hardware " +
-  "evidence concentrated in manipulation. Isolating the causal chain that recursion requires is the next step.";
+  "Existing studies, concentrated in manipulation, support behavioral improvement, benefits to later learning, and procedure improvement. " +
+  "Some systems also change the improver's knowledge or tools, but the physical studies reviewed here have yet to isolate gains attributable to recursion.";
 
 export const OUTLINE = [
   ["1", "Introduction", ""],
-  ["2", "Background and Framework", "Robot learning in brief · What this review covers · How each study is read · What counts as progress · Why physical experience differs"],
-  ["3", "Self-Improvement via Policy Updates", "From practice to training targets · From feedback to better actions · From proposals to policies · From single runs to lifelong practice"],
-  ["4", "Self-Improvement via World Models", "Using models to plan and train · Feeding models the right data · Shaping what models predict · Judging models by their use"],
-  ["5", "Self-Improvement via External Knowledge", "Remembering experience · Reusing skills and code · Transferring across robots"],
-  ["6", "Self-Improvement via Learning Procedure Updates", "Teaching the next learner · Choosing what to practice · Revising how success is judged · Learning how to update · Automating the experiment loop"],
-  ["7", "What Current Evidence Shows", "Evidence by claim · Limits of the evidence"],
-  ["8", "Why Self-Improvement Stalls", "When data stop teaching · When models and rewards fall behind · When bottlenecks move · When knowledge is lost or misused · When costs outrun gains"],
-  ["9", "Keeping Self-Improvement Safe", "Keeping practice possible · Protecting the judge · Admitting and undoing changes · Placing human oversight"],
-  ["10", "Toward Recursive Self-Improvement", "What recursion requires · How to test recursion"],
-  ["11", "Challenges and Future Directions", "Six open problems (below)"],
-  ["12", "Conclusion", ""],
-  ["A–D", "Appendices", "Additional systems and learning settings · Reported outcomes and experimental context · Experimental interpretation · Glossary"],
+  ["2", "Foundations of Physical RSI", "Learning to act · Defining recursive self-improvement · Relating RSI to robot learning · Facing physical limits · Benchmarking self-improvement"],
+  ["3", "Mechanisms toward Physical RSI", "Improving policies, world models, and knowledge · Improving learning procedures · Improving the improver · Closing the recursive loop"],
+  ["4", "Challenges and Future Directions for Physical RSI", "Measuring improvement · Accumulating improvement · Keeping improvement safe · Making improvement recursive"],
+  ["5", "Conclusion", ""],
+  ["A–C", "Appendices", "Extended landscape of physical self-improvement · Reported outcomes and experimental context · Glossary"],
 ];
 
 export const RECURSION = [
-  ["Useful results and revised procedures can already help the next learner.", "Later-learning benefits and local procedure improvements are tested in several physical and simulated comparisons."],
-  ["Repair knowledge can improve the reviser.", "Testing this first link requires comparing the reviser with its earlier and its acquired repair knowledge."],
-  ["The improved reviser must help improve itself.", "This second link must hold under the same physical constraints that sustain ordinary learning."],
-  ["Where to start.", "Reward construction or skill-library editing: their revisions are inspectable, can be screened in simulation, and can then be confirmed on hardware through matched later learners. Eureka (a reward reviser whose knowledge does not change) and PRACTICE (a learned skill editor whose own reviser is fixed) already supply baselines."],
+  ["The first three claims already have support.", "Existing studies show behavioral improvement, later-learning benefit, and procedure improvement; some systems also change their improver's knowledge or tools."],
+  ["R1: repair knowledge must improve the improver.", "Give the improver, with its earlier and with its acquired repair knowledge, the same new failure histories, tools, objectives, and budget; apply the learning procedures each produces to matched learners and compare common physical outcomes."],
+  ["R2: the improved improver must help improve itself.", "Let the updated improver propose a revision of itself and compare it with a control revision proposed with its earlier knowledge frozen; repeating the first test on the resulting improvers links further gains to what was learned."],
+  ["Where to start.", "Reward construction and skill-library editing yield inspectable revisions that simulation can screen, leaving four hardware-trained learners per seed. Eureka (a reward improver whose knowledge does not change) and PRACTICE (a learned skill editor whose own improver is fixed) already supply baselines."],
 ];
 
-// Table 14 of the manuscript: [direction, conditions served, central question, starting benchmark]
+// The manuscript's table of open problems: [direction, conditions served, central question, starting benchmark]
 export const PROBLEMS = [
-  ["Finding the bottleneck", ["Signal specificity"], "Which component limits the next improvement?", "Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures"],
-  ["Choosing the next experiment", ["Signal specificity"], "Which probe yields evidence that an available update can use?", "Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines"],
-  ["Keeping judges aligned", ["Round-to-round shift"], "How can evaluators be refreshed without changing the intended task?", "Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes"],
-  ["Transferring repair knowledge", ["Recipient compatibility"], "Does knowledge about earlier repairs improve repairs on new failure families?", "The two-round comparison of Figure 6 on held-out failure families"],
-  ["Surviving system changes", ["Recipient compatibility", "Round-to-round shift"], "When should an artifact be reused, adapted, revalidated, or retired?", "Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift"],
-  ["Budgeting physical resources", ["Physical continuation"], "How should robot time, human attention, compute, and wear be spent over time?", "Task sequences with maintenance events under finite capacities; Pareto reporting of resources"],
+  ["Keeping judges aligned", ["Distribution shift"], "How can evaluators be refreshed without changing the intended task?", "Fixed learner and data; varied evaluator and refresh rule; protected physical outcomes"],
+  ["Surviving system changes", ["Usability", "Distribution shift"], "When should an artifact be reused, adapted, revalidated, or retired?", "Declared changes to sensing, embodiment, timing, interfaces, and memory schemas, plus gradual drift"],
+  ["Budgeting physical resources", ["Continued practice"], "How should robot time, human attention, compute, and wear be spent over time?", "Task sequences with maintenance events under finite capacities; Pareto reporting of resources"],
+  ["Finding the bottleneck", ["Informative feedback"], "Which component limits the next improvement?", "Injected policy, model, evaluator, and interface faults with similar terminal outcomes; held-out natural failures"],
+  ["Choosing the next experiment", ["Informative feedback"], "Which probe yields evidence that an available update can use?", "Fixed starting system and budget; joint selection versus fixed, information-gain-only, and sequential baselines"],
+  ["Transferring repair knowledge", ["Usability", "Distribution shift"], "Does knowledge about earlier repairs improve repairs on new failure families?", "The two-round comparison of Figure 9 on held-out failure families"],
 ];
 
 export const PROGRAMS = [
   "Combine cross-component diagnosis with joint experiment–update selection under matched multi-resource budgets.",
   "Test versioned evaluators and repair knowledge on held-out failures and declared hardware or software changes, using protected outcome checks to separate transfer from drift.",
-  "Connect these tests across at least two causally isolated procedure-revision rounds, and report the full acquisition, maintenance, and revalidation ledger.",
+  "Connect these tests across at least two causally isolated procedure-revision rounds and report their full acquisition, maintenance, and revalidation costs.",
 ];
 
 export const CLOSING =
-  "The first robot that becomes measurably better at rewriting its own recipe, even for a single family of failures, will mark the moment when physical experience begins to compound.";
+  "Physical recursive self-improvement will be demonstrated not when a robot changes many times, but when knowledge of why one repair worked causally improves how the next repair is made.";
 
 // BibTeX entry shared by the README and the website
 export function surveyBibtex(url) {
@@ -136,9 +130,9 @@ export function surveyBibtex(url) {
 export const TEASER_ALT =
   "A painting in the style of Van Gogh: under a swirling starry sky, a small robot practises grasping a mug, files the change it kept, rewrites its own learning recipe, and climbs a step holding the improved recipe, while a golden trail loops back to the start.";
 
-// Figure 4's four systems (panel titles), with the robot that illustrates each panel
+// Figure 6's four systems (panel titles), with the robot that illustrates each panel
 export const SYSTEMS = [
-  ["silvr", "SILVR", "Real-robot collection and planner revision"],
+  ["silvr", "SILVR", "Collect on the real robot, then revise the planner"],
   ["rise", "RISE", "Improve a policy inside fixed learned models"],
   ["playworld", "PlayWorld", "Acquire play data, fit a model, then optimize a noise policy"],
   ["vlaw", "VLAW", "Update the world model, then the policy; repeat with new physical data"],

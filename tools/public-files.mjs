@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const ROOT = fileURLToPath(new URL("../", import.meta.url));
-export const PROJECT_NAME = "From Physical Experience to Recursive Self-Improvement";
+export const PROJECT_NAME = "Toward Recursive Self-Improvement in Physical AI";
 export const SHORT_NAME = "Physical2RSI";
 export const SITE_URL = "https://physical2rsi.github.io/";
 export const REPO_URL = "https://github.com/Physical2RSI/physical2rsi.github.io";

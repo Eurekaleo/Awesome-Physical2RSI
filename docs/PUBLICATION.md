@@ -19,4 +19,4 @@ This checklist describes the full release; it does not authorize one.
 - Keep the public build allowlist explicit. Add a manuscript download only when redistribution has been separately approved.
 - Run the full build and check desktop, mobile, keyboard navigation, citation copying, and links on the deployed site.
 
-Until then, preserve the public project name **From Physical Experience to Recursive Self-Improvement** (short form: **Physical2RSI**) and the public reference metadata. Do not publish survey content beyond what the authors approved for the README and the website's survey section.
+Until then, preserve the public project name **Toward Recursive Self-Improvement in Physical AI** (short form: **Physical2RSI**) and the public reference metadata. Do not publish survey content beyond what the authors approved for the README and the website's survey section.

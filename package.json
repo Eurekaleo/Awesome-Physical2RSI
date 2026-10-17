@@ -2,7 +2,7 @@
   "name": "awesome-physical2rsi",
   "version": "0.1.0",
   "private": true,
-  "description": "Physical2RSI — From Physical Experience to Recursive Self-Improvement: a survey and public reference library.",
+  "description": "Physical2RSI — Toward Recursive Self-Improvement in Physical AI: a survey and public reference library.",
   "type": "module",
   "scripts": {
     "readme": "node tools/render-readme.mjs && node tools/render-survey.mjs",

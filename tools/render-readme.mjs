@@ -48,7 +48,7 @@ const ICON = {
   "Research questions": "questions",
   "Repository guide": "guide",
   "The review at a glance": "framework",
-  "Four uses of acquired change": "uses",
+  "Four uses of retained change": "uses",
   "Toward recursive self-improvement": "recursion",
   "Open problems": "problems",
   References: "references",
@@ -185,7 +185,7 @@ export function renderReadme(references) {
     "About the survey",
     "Research questions",
     "The review at a glance",
-    "Four uses of acquired change",
+    "Four uses of retained change",
     "Toward recursive self-improvement",
     "Open problems",
     "References",
@@ -221,7 +221,7 @@ export function renderReadme(references) {
   for (const [number, chapter, covers] of OUTLINE) add(`| ${number} | **${chapter}** | ${covers} |`);
   add("", "</details>", "");
 
-  heading("Four uses of acquired change");
+  heading("Four uses of retained change");
   add(
     "The same physical experience can leave very different kinds of change behind, and each has a different next user. Each system is placed by the use that its main experiment tests.",
     "",

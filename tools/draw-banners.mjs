@@ -38,7 +38,6 @@ function findBrowser() {
 
 function page(width, height, titleSize, teaserWidth) {
   const asset = (file) => pathToFileURL(path.join(ROOT, file)).href;
-  const [lead, rest] = SURVEY.title.split(" to ");
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face { font-family: Manrope; src: url("${asset("assets/fonts/manrope-latin.woff2")}") format("woff2"); font-weight: 200 800; }
 html, body { margin: 0; }
@@ -59,7 +58,7 @@ h1 em { font-style: normal; color: #125b50; }
 </style></head><body>
 <div class="copy">
   <div class="brand"><img src="${asset("assets/mark.png")}" alt=""><div>Physical<span>2</span>RSI</div></div>
-  <h1>${lead}<br>to <em>${rest.replace(" Self-", "<br>Self&#8209;")}</em></h1>
+  <h1>${SURVEY.title.replace("Recursive Self-Improvement", "<em>Recursive<br>Self&#8209;Improvement</em><br>")}</h1>
   <p class="subtitle">${SURVEY.subtitle}</p>
 </div>
 <img class="teaser" src="${asset("assets/teaser.webp")}" alt="">
